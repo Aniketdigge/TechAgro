@@ -1,3 +1,4 @@
+from typing import DefaultDict
 from django.db import models
 
 class Product(models.Model):
@@ -8,6 +9,10 @@ class Product(models.Model):
     category = models.CharField(max_length=50, default="")
     sub_category = models.CharField(max_length=50, default="")
     price = models.IntegerField(default=0)
+    image = models.ImageField(upload_to="customer/images", default="")
+
+    def __str__(self) -> str:
+        return self.Product_name
 
    
 

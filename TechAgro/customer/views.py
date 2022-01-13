@@ -7,7 +7,7 @@ def index(request):
     return render(request, "customer/index.html")
 
 #def login(request):
-    return render(request, "customer/customer_login.html")
+    #return render(request, "customer/customer_login.html")
 
 #def grains(request):
     #return HttpResponse("<h1>We are at Grains</h1>")
