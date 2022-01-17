@@ -19,7 +19,7 @@ def contactus(request):
     return HttpResponse("<h1>We are at Contact Us</h1>")
 
 def aboutus(request):
-    return HttpResponse("<h1>We are at About Us</h1>")
+    return render(request, "customer/aboutus.html")
 
 def tracker(request):
     return HttpResponse("<h1>We are at Tracker</h1>")
