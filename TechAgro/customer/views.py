@@ -1,10 +1,15 @@
+from math import ceil
 from typing import ContextManager
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Product
 # Create your views here.
 def index(request):
-    return render(request, "customer/index.html")
+    products = Product.objects.all()
+    n = len(products)
+    nSlides = n//4 + ceil((n/4) + (n//4))
+    params = {'no_of_slides':nSlides, 'range':range(1,nSlides), 'product':products}
+    return render(request, "customer/index.html", params)
 
 #def login(request):
     #return render(request, "customer/customer_login.html")
@@ -32,6 +37,7 @@ def productView(request):
 
 def checkout(request):
     return HttpResponse("<h1>We are at Checkout</h1>")
+
 
 
 
