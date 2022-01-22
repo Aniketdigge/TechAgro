@@ -35,62 +35,13 @@
 {% block title %}Customer{% endblock %} {% block body %} {% load static %}
 
 <div class="container">
-    {% for product, range, nSlides in allProds %}
-    <h1>{{product.0.category}}</h1>
-    <div id="demo{{forloop.counter}}" class="carousel slide my-3" data-ride="carousel">
-        <ul class="carousel-indicators">
-            <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
-            {% for i in range %}
-            <li data-target="#demo{{forloop..parentloop.counter}}" data-slide-to="{{i}}"></li>
-            {% endfor %}
-        </ul>
-
-        <!--Slideshow starts here -->
-        <div class="container carousel-inner no-padding">
-
-            <div class="carousel-item active">
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='/media/{{product.0.image}}' class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{product.0.Product_name}}</h5>
-                            <p class="card-text">{{product.0.Desc}}</p>
-                            <a href="#" class="btn btn-success">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-
-                {% for i in product|slice:"1:" %}
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='/media/{{i.image}}' class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{i.Product_name}}</h5>
-                            <p class="card-text">{{i.Desc}}</p>
-                            <a href="#" class="btn btn-success">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
-            </div>
-            <div class="carousel-item">
-                {% endif %} {% endfor %}
-            </div>
-        </div>
-    </div>
-    <div>
-        <!-- left and right controls for the slide -->
-        <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        {% endfor %}
+    <div style="margin-top: 10px;">
+        <h1>Welcome To TechAgro</h1>
     </div>
 
-
-
+    <div class="card" style="width: 18rem; margin-left: 700px; margin-top: 40px;">
+        <img src="{% static 'customer/AgirDemo.jfif' %}" class="card-img-top" alt="...">
+    </div>
 
 
     <!-- Optional JavaScript -->
