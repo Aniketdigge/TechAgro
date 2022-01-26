@@ -56,25 +56,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'CustomerHomes' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Products</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'CustomerProduct' %}">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Tracker</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'CustomerTracker' %}">Tracker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Search</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'CustomerSearch' %}">Search</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'CustomerContactUs' %}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'CustomerAboutUs' %}">About Us</a>
                     </li>
-                    <button type="button" class="btn btn-outline-dark" style="margin-left: 700px;">Sigh In</button>
-                    <button type="button" class="btn btn-outline-dark" style="margin-left: 10px;">Sigh Up</button>
+                    <a href="{% url 'CustomerLogin' %}"><button type="button" class="btn btn-outline-dark" style="margin-left: 700px;">Sigh In</button></a>
+                    <a href="{% url 'CustomerSignup' %}"><button type="button" class="btn btn-outline-dark" style="margin-left: 10px;">Sigh Up</button></a>
                 </ul>
             </div>
         </div>

@@ -9,33 +9,26 @@ from .models import Product
 def index(request):
     return render(request, "customer/index.html")
 
-
-#def login(request):
-    #return render(request, "customer/customer_login.html")
-
-#def grains(request):
-    #return HttpResponse("<h1>We are at Grains</h1>")
-
-#def vegitables(request):
-    #return HttpResponse("<h1>We are at Vegitables</h1>")
-
-def contactus(request):
-    return HttpResponse("<h1>We are at Contact Us</h1>")
-
-def aboutus(request):
-    return render(request, "customer/aboutus.html")
+def products(request):
+    return render(request, "customer/customer_product.html")
 
 def tracker(request):
-    return HttpResponse("<h1>We are at Tracker</h1>")
+    return render(request, "customer/customer_tracker.html")
 
 def search(request):
-    return HttpResponse("<h1>We are at Search</h1>")
+    return render(request, "customer/customer_search.html")
 
-def productView(request):
-    return HttpResponse("<h1>We are at Product View</h1>")
+def contactus(request):
+    return render(request, "customer/customer_contactus.html")
 
-def checkout(request):
-    return HttpResponse("<h1>We are at Checkout</h1>")
+def aboutus(request):
+    return render(request, "customer/customer_aboutus.html")
+
+def login(request):
+    return render(request, "customer/customer_login.html")
+
+def signup(request):
+    return render(request, "customer/customer_signup.html")
 
 
 
