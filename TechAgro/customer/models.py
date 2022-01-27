@@ -14,6 +14,15 @@ class Product(models.Model):
     def __str__(self) -> str:
         return self.Product_name
 
+class Cust_Login(models.Model):
+    User_ID = models.AutoField
+    User_Name = models.CharField(max_length=50)
+    Password = models.CharField(max_length=50)
+    User_Type = models.CharField(max_length=50)
+
+    def __str__(self) -> str:
+        return self.User_Name
+
    
 
 
