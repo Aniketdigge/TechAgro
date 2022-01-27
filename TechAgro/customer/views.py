@@ -4,7 +4,7 @@ from typing import ContextManager
 from unicodedata import category
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Product
+from .models import Cust_Login, Product
 # Create your views here.
 def index(request):
     return render(request, "customer/index.html")
@@ -25,6 +25,7 @@ def aboutus(request):
     return render(request, "customer/customer_aboutus.html")
 
 def login(request):
+
     return render(request, "customer/customer_login.html")
 
 def signup(request):
